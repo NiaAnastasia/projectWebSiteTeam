@@ -714,3 +714,20 @@ a {
 .check-container .label-form .link {
     color: #4d5ae5;
 }
+
+
+@media (min-width: 320px) 
+{
+    .container {
+        gap: 72px;
+        flex-direction: row;
+        flex-wrap:  wrap;
+        flex-basis: calc((100% - 72px) / 2);
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1158px) 
+{
+
+}
