@@ -178,13 +178,6 @@ a {
     max-width: 1440px;
 }
 
-@media (min-resolution: 192dpi) 
-{
-    .section-one{
-        background-image: 
-        url('../images/people-office.jpg');
-    }
-}
 
 .category-header , .address-header {
     display: flex;
@@ -722,25 +715,6 @@ a {
     color: #4d5ae5;
 }
 
+@media (max-width: 1158px) {
 
-@media (min-width: 320px) 
-{
-    .container {
-        gap: 72px;
-        flex-direction: row;
-        flex-wrap:  wrap;
-        flex-basis: calc((100% - 72px) / 2);
-    }
-
-}
-
-
-@media (min-width: 768px) and (max-width: 1158px) 
-{
-    .container {
-        gap: 96px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        flex-basis: calc((100% - 192px) / 2);
-        }
 }
