@@ -715,6 +715,25 @@ a {
     color: #4d5ae5;
 }
 
+
 @media (max-width: 1158px) {
+
+
+}
+
+@media (max-width: 768px) {
+    .category-header {
+        margin: 0 auto;
+    }
+    .address .address-header {
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 11px;
+    }
+}
+
+
+
+@media (min-width: 320px) {
 
 }
