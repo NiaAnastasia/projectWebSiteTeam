@@ -716,24 +716,99 @@ a {
 }
 
 
-@media (max-width: 1158px) {
+@media (min-width: 1158px) {
 
 
 }
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 768px){
     .category-header {
         margin: 0 auto;
     }
     .address .address-header {
         flex-wrap: wrap;
         flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
         gap: 11px;
     }
+
+    .section-two {
+        padding: 96px 0;
+    }
+
+    .ulist-two .list-two .icon-container {
+            display: none;
+    }
+    .ulist-two {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    .ulist-two .list-two {
+        flex-basis: calc((100% - 24px) /2);
+    }
+    .three-title {
+        font-weight: 700;
+        font-size: 36px;
+    }
+    .section-team {
+        padding: 104px 0;
+    }
+    .ulist-workers {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 24px;
+    }
+    
+    .ulist-workers .workers {
+            flex-basis: calc((100% - 24px) /2);
+            width: calc((100% - 24px) / 2);
+    }
+    .section-four {
+        padding: 92px 0 92px 0;
+    }
+
+        .ulportfolio-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 24px;
+        }
+    
+        .ulportfolio-list .list {
+        flex-basis: calc((100% - 24px) /2);
+        }
+        .page-footer {
+            padding: 96px 108px;
+        }
+        .page-footer .container {
+            flex-wrap: wrap;
+        }
+        .footerlogo-container {
+            margin-right: 24px;
+        }
+        .subscribe-container {
+            padding-top: 72px;
+        }
+        .page-footer .container .subscribe-container {
+            padding-left: 0;
+        }
 }
 
+/* @media (min-width: 320px) {
+    .ulist-two .list-two .icon-container {
+        display: none;
+    }
 
+    .ulist-two {
+        flex-direction: column;
+        gap: 72px;
+    }
 
-@media (min-width: 320px) {
-
-}
+    .three-title {
+        font-weight: 700;
+        font-size: 36px;
+    }
+} */
