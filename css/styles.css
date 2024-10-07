@@ -128,7 +128,7 @@ a {
 }
 
 .burger-button {
-    display: flex;
+    display: inline-flex;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -136,14 +136,16 @@ a {
     width: 24px;
     height: 24px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     padding: 0;
+    margin-top: 16px;
 }
 
-.burger-button .icon {
+.burger-button .icon-burger {
+    position: absolute;
     width: 24px;
     height: 24px;
-    fill: #2E2F42;
+    fill: #2f2f37;
 }
 
 
@@ -748,8 +750,17 @@ a {
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
+
     .category-header , .address .address-header {
         display: none;
+    }
+    /* maybe need to delete  */
+    .section-one {
+        padding: 0 72px;
+    }
+    .section-one .container .page-title {
+        font-size: 36px;
+        max-width: 216px;
     }
     .icon-container {
         display: none;
