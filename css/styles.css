@@ -127,22 +127,25 @@ a {
     color: #404bbf;
 }
 
-/* button for mobile firts burger */
-.bureger-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+.burger-button {
+    display: flex;
+    border: none;
+    background-color: transparent;
     cursor: pointer;
+    position: absolute;
     width: 24px;
     height: 24px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 }
-.bureger-button .header-burgerlist .list .icon {
+
+.burger-button .icon {
+    width: 24px;
+    height: 24px;
     fill: #2E2F42;
-    display: flex;
-    flex-direction: column;
 }
+
 
 .page-title {
     font-size: 56px;
@@ -478,49 +481,6 @@ a {
 .category-header .link:last-child {
     margin-right: 0;
 }
-
-/* @media (max-width: 767px) {
-    .header-burger {
-        display: block;
-        position: relative;
-        width: 30px;
-        height: 20px;
-    }
-    .header-burger span {
-        position: absolute;
-        background-color: #2E2F42;
-        left: 0;
-        width: 100%;
-        height: 2.4px;
-        top: 9px;
-    }
-
-    .header-burger::before,
-    .header-burger::after {
-        content: "";
-        background-color: #2E2F42;
-        position: absolute;
-        width: 100%;
-    }
-    .header-burger::before {
-        top: 0;
-    }
-    .header-burger::after {
-        bottom: 0;
-    }
-    
-    .page-header .container .menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #fff;
-
-    }
-} */
-
-/* остановилась тут */
 
 .media-container .text, .subscribe-container .text {
     font-weight: 500;
