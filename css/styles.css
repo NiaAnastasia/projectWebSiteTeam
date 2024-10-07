@@ -26,11 +26,18 @@ img {
     margin-bottom: 8px;
 }
 
+/*  added display flex, flex-direcitoon column for mobile first but need to delete for 1158px */
 .container {
+    display: flex;
+    flex-direction: column; 
     max-width: 1158px;
+    min-width: 320px;
     padding: 0 15px;
     margin: 0 auto;
 }
+
+
+
 .page-header .container {
     display: flex;
     justify-content: space-between;
@@ -118,6 +125,23 @@ a {
 }
 .address-header .link:hover, .address-header .link:focus {
     color: #404bbf;
+}
+
+/* button for mobile firts burger */
+.bureger-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+.bureger-button .header-burgerlist .list .icon {
+    fill: #2E2F42;
+    display: flex;
+    flex-direction: column;
 }
 
 .page-title {
@@ -455,7 +479,7 @@ a {
     margin-right: 0;
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     .header-burger {
         display: block;
         position: relative;
@@ -494,7 +518,7 @@ a {
         background-color: #fff;
 
     }
-}
+} */
 
 /* остановилась тут */
 
@@ -763,113 +787,201 @@ a {
     color: #4d5ae5;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+    .category-header , .address .address-header {
+        display: none;
+    }
+    .icon-container {
+        display: none;
+    }
+    .section-two {
+        padding: 96px 0;
+    }
+    .ulist-two {
+    flex-direction: column;
+    align-self: center;
+    }
+    .list-two {
+        width: 288px;
+        
+    }
+    .list-two .three-title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11111;
+        text-align: center;
+    }
 
+    .ulist-workers {
+        flex-direction: column;
+        gap: 72px;
+    }
 
+    .teamcontainer {
+        width: 264px;
+    }
 
+    .page-footer .container {
+        gap: 72px;
+    }
+    .footerlogo-container {
+        margin-right: 0;
+        padding: 0 16px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-/* @media (min-width: 1158px) {
-
-
-}
-
-
-
-@media (max-width: 768px){
-    .category-header {
+    .page-footer .container .logo-header {
+        padding: 0 102px;
+    } 
+    .page-footer .container .media-container {
+        padding: 0 56px;
+    }
+    .media-container .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .page-footer .container .subscribe-container {
+        padding-left: 0;
         margin: 0 auto;
     }
-    .address .address-header {
+    .media-container .text,
+    .subscribe-container .text {
+        text-align: center;
+    }
+    .form {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .form-label .form-input {
+        width: 288px;
+    }
+
+    .form .form-button {
+        width: 165px;
+        margin-left: 62px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1157px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }   
+
+        .address-header .link {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .address .address-header {
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
         gap: 11px;
-    }
+        }
+        .section-one .container {
+            display: flex;
+            flex-direction: column;
+        }
+        .section-two {
+            padding: 96px 0;
+        }
 
-    .section-two {
-        padding: 96px 0;
-    }
-
-    .ulist-two .list-two .icon-container {
+        .section-team .container {
+            flex-direction: column;
+        }
+    
+        .ulist-two .list-two .icon-container {
             display: none;
-    }
-    .ulist-two {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 24px;
-    }
-    .ulist-two .list-two {
-        flex-basis: calc((100% - 24px) /2);
-    }
-    .three-title {
-        font-weight: 700;
-        font-size: 36px;
-    }
-    .section-team {
-        padding: 104px 0;
-    }
-    .ulist-workers {
+        }
+    
+        .ulist-two {
             flex-direction: row;
             flex-wrap: wrap;
             gap: 24px;
-    }
+        }
     
-    .ulist-workers .workers {
+        .ulist-two .list-two {
+            flex-basis: calc((100% - 24px) /2);
+        }
+    
+        .three-title {
+            font-weight: 700;
+            font-size: 36px;
+        }
+        .teamcontainer {
+            width: 584px;
+        }
+        .section-team {
+            padding: 104px 0;
+        }
+    
+        .ulist-workers {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+    
+        .ulist-workers .workers {
             flex-basis: calc((100% - 24px) /2);
             width: calc((100% - 24px) / 2);
-    }
-    .section-four {
-        padding: 92px 0 92px 0;
-    }
-
+        }
+    
+        .section-four {
+            padding: 92px 0 92px 0;
+        }
+        .section-four .container {
+            flex-direction: column;
+        }
+    
         .ulportfolio-list {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 24px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 24px;
         }
     
         .ulportfolio-list .list {
-        flex-basis: calc((100% - 24px) /2);
+            flex-basis: calc((100% - 24px) /2);
         }
+    
         .page-footer {
             padding: 96px 108px;
         }
+    
         .page-footer .container {
             flex-wrap: wrap;
         }
+    
         .footerlogo-container {
             margin-right: 24px;
         }
+    
         .subscribe-container {
             padding-top: 72px;
         }
+    
         .page-footer .container .subscribe-container {
             padding-left: 0;
         }
 }
 
-/* @media (min-width: 320px) {
-    .ulist-two .list-two .icon-container {
-        display: none;
+@media (min-width: 1158px) {
+    .category-header,
+    .address-header {
+        justify-content: flex-end;
     }
 
-    .ulist-two {
-        flex-direction: column;
-        gap: 72px;
-    }
+}
 
-    .three-title {
-        font-weight: 700;
-        font-size: 36px;
-    }
-} */ 
+
+
+
+
+
+
+
+
+
+
+
