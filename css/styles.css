@@ -755,9 +755,9 @@ a {
         display: none;
     }
     /* maybe need to delete  */
-    .section-one {
+    /* .section-one {
         padding: 0 72px;
-    }
+    } */
     .section-one .container .page-title {
         font-size: 36px;
         max-width: 216px;
