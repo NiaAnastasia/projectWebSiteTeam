@@ -31,7 +31,6 @@ img {
     display: flex;
     flex-direction: column; 
     max-width: 1158px;
-    min-width: 320px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -133,10 +132,11 @@ a {
     background-color: transparent;
     cursor: pointer;
     position: absolute;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0;
-    margin-top: 16px;
+    /* align-items: center;
+    justify-content: flex-end; */
+    padding-left: 280px;
+    padding-top: 16px;
+    margin: 0;
 }
 
 .burger-button .icon-burger {
@@ -917,6 +917,13 @@ a {
     
         .ulist-two .list-two {
             flex-basis: calc((100% - 24px) /2);
+        }
+        .ulist-two .list-two .three-title {
+            font-weight: 700;
+            font-size: 36px;
+        }
+        .ulist-two .list-two .text {
+            width: 356px;
         }
         .teamcontainer {
             width: 584px;
