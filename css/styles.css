@@ -133,8 +133,6 @@ a {
     background-color: transparent;
     cursor: pointer;
     position: absolute;
-    width: 24px;
-    height: 24px;
     align-items: center;
     justify-content: flex-end;
     padding: 0;
@@ -755,9 +753,9 @@ a {
         display: none;
     }
     /* maybe need to delete  */
-    /* .section-one {
-        padding: 0 72px;
-    } */
+    .section-one {
+        padding: 72px 0;
+    }
     .section-one .container .page-title {
         font-size: 36px;
         max-width: 216px;
@@ -771,6 +769,7 @@ a {
     .ulist-two {
     flex-direction: column;
     align-self: center;
+    gap: 72px;
     }
     .list-two {
         width: 288px;
@@ -787,10 +786,12 @@ a {
         flex-direction: column;
         gap: 72px;
     }
-
-    .teamcontainer {
-        width: 264px;
+    .section-team .container {
+        width: 296px;
     }
+    /* .teamcontainer {
+        width: 296px;
+    } */
 
     .page-footer .container {
         gap: 72px;
@@ -803,13 +804,11 @@ a {
     .page-footer .container .logo-header {
         padding: 0 102px;
     } 
-    .page-footer .container .media-container {
-        padding: 0 56px;
-    }
     .media-container .text {
-        display: flex;
+        text-align: center;
+    }
+    .media-container .ulist-media {
         justify-content: center;
-        align-items: center;
     }
     .page-footer .container .subscribe-container {
         padding-left: 0;
@@ -840,8 +839,12 @@ a {
     }   
 
         .address-header .link {
-            padding-top: 0;
-            padding-bottom: 0;
+            padding-top: 17px;
+            padding-bottom: 17px;
+            font-size: 12px;
+            line-height: 1.16667;
+            letter-spacing: 0.04em;
+            
         }
 
         .address .address-header {
@@ -870,16 +873,11 @@ a {
         .ulist-two {
             flex-direction: row;
             flex-wrap: wrap;
-            gap: 24px;
+            gap: 72px 24px;
         }
     
         .ulist-two .list-two {
             flex-basis: calc((100% - 24px) /2);
-        }
-    
-        .three-title {
-            font-weight: 700;
-            font-size: 36px;
         }
         .teamcontainer {
             width: 584px;
@@ -891,7 +889,7 @@ a {
         .ulist-workers {
             flex-direction: row;
             flex-wrap: wrap;
-            gap: 24px;
+            gap: 64px 24px;
         }
     
         .ulist-workers .workers {
@@ -916,12 +914,9 @@ a {
             flex-basis: calc((100% - 24px) /2);
         }
     
-        .page-footer {
-            padding: 96px 108px;
-        }
-    
         .page-footer .container {
             flex-wrap: wrap;
+            width: 584px;
         }
     
         .footerlogo-container {
@@ -938,9 +933,15 @@ a {
 }
 
 @media (min-width: 1158px) {
+    .page-header .container {
+        flex-direction: row;
+    }
     .category-header,
     .address-header {
         justify-content: flex-end;
+    }
+    .page-footer .container {
+        flex-direction: row;
     }
 
 }
