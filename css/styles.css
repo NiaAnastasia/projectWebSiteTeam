@@ -887,6 +887,9 @@ a {
         align-items: flex-end;
         gap: 11px;
         }
+        .burger-button {
+            display: none;
+        }
         .section-one {
             padding: 109px 0;
         }
@@ -975,6 +978,9 @@ a {
     .category-header,
     .address-header {
         justify-content: flex-end;
+    }
+    .burger-button {
+        display: none;
     }
     .page-footer .container {
         flex-direction: row;
