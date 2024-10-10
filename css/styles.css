@@ -600,6 +600,40 @@ a {
     margin-left: 16px;
 }
 
+/* modal for burger mobile  */
+.burger-overlay {
+    position: fixed;
+    background-color: #FFFFFF;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 100%;
+    z-index: 998;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.burger-modal {
+    position: absolute;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 16px;
+    max-width: 320px;
+    max-height: 100%;
+}
+
+
 .modal-overlay {
     background-color: rgba(46, 47, 66, 0.40);
     position: fixed;
@@ -779,13 +813,66 @@ a {
 
 @media (max-width: 767px) {
 
-    .category-header , .address .address-header {
+    /* .category-header , .address .address-header {
+        display: none;
+    } */
+
+    /* style for header for mobile */
+    .page-header .container .address {
         display: none;
     }
+    .burger-modal .category-header {
+        flex-direction: column;
+        gap: 40px;
+        padding-top: 72px;
+        }
+    .burger-modal .category-header .link {
+        font-size: 36px;
+        font-weight: 700;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .burger-modal .category-header .primary {
+        color: #404BBF;
+    }
+
+    .burger-modal .category-header .primary::after {
+        background-color: transparent;
+    }
+
+    .menu .category-header {
+        display: none;
+        }
+
+    .burger-modal .address {
+        margin-top: 168px;
+    } 
+    .burger-modal .category-header , .address-header {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .burger-modal .address-header .link {
+        font-size: 20px;
+        font-weight: 500;
+        padding-top: 0; 
+        padding-bottom: 0; 
+        color: #434455;
+    }
+    .burger-modal .address-header .decor {
+        color: #4d5ae5;
+    }
+
+    .burger-modal .ulist-media {
+        gap: 40px;
+        width: 280px;
+        margin-top: 48px;
+    }
+
+
     /* maybe need to delete  */
     .section-one {
         padding: 72px 0;
-
     }
     .section-one .container .page-title {
         font-size: 36px;
@@ -890,6 +977,10 @@ a {
         .burger-button {
             display: none;
         }
+
+        .burger-overlay, .burger-modal {
+            display: none;
+        }
         .section-one {
             padding: 109px 0;
         }
@@ -987,6 +1078,9 @@ a {
         justify-content: flex-end;
     }
     .burger-button {
+        display: none;
+    }
+    .burger-overlay, .burger-modal {
         display: none;
     }
     .page-footer .container {
