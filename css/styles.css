@@ -20,6 +20,7 @@ ul {
 img {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
 .text {
@@ -132,17 +133,12 @@ a {
     background-color: transparent;
     cursor: pointer;
     position: absolute;
-    /* align-items: center;
-    justify-content: flex-end; */
-    padding-left: 280px;
-    padding-top: 16px;
+    top: 20px;
+    right: 16px;
     margin: 0;
 }
 
 .burger-button .icon-burger {
-    position: absolute;
-    width: 24px;
-    height: 24px;
     fill: #2f2f37;
 }
 
@@ -441,8 +437,8 @@ a {
 .app-name {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
-    width: 360px;
-    height: 120px;
+    /* width: 360px;
+    height: 120px; */
     border-top: none;
 }
 .app-name .three-title {
@@ -458,7 +454,9 @@ a {
 
 .page-footer .container {
     display: flex;
-    align-items: baseline;
+    /* align-items: baseline; */
+    justify-content: center;
+    align-items: center;
 }
 .footerlogo-container {
     margin-right: 120px;
@@ -468,9 +466,9 @@ a {
     margin-bottom: 16px;
     padding: 0;
 }
-.page-footer .container p {
+/* .page-footer .container p {
     max-width: 264px;
-}
+} */
 
 .page-footer .container .ulist-media {
     display: flex;
@@ -501,7 +499,7 @@ a {
     text-transform: uppercase;
     padding-top: 25.5px;
     padding-bottom: 25.5px ;
-    margin-right: 76px;
+    /* margin-right: 76px; */
 }
 
 .header-burger {
@@ -625,12 +623,10 @@ a {
     position: absolute;
     background-color: #FFFFFF;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    padding-left: 16px;
-    max-width: 320px;
-    max-height: 100%;
+    padding: 72px 153px 368px 16px;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -824,7 +820,7 @@ a {
     .burger-modal .category-header {
         flex-direction: column;
         gap: 40px;
-        padding-top: 72px;
+        margin-bottom: 168px;
         }
     .burger-modal .category-header .link {
         font-size: 36px;
@@ -845,7 +841,7 @@ a {
         }
 
     .burger-modal .address {
-        margin-top: 168px;
+        margin: 0 auto;
     } 
     .burger-modal .category-header , .address-header {
         flex-direction: column;
@@ -900,9 +896,17 @@ a {
         text-align: center;
     }
 
+    .ulist-two .list-two .text {
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+
     .ulist-workers {
         flex-direction: column;
         gap: 72px;
+    }
+    .section-team {
+        padding: 96px 0;
     }
     .section-team .container {
         width: 296px;
@@ -918,12 +922,9 @@ a {
     }
     .footerlogo-container {
         margin-right: 0;
-        padding: 0 16px;
+        text-align: center;
     }
 
-    .page-footer .container .logo-header {
-        padding: 0 102px;
-    } 
     .media-container .text {
         text-align: center;
     }
@@ -950,17 +951,37 @@ a {
         width: 165px;
         margin-left: 62px;
     }
+
+    .modal {
+        width: 288px;
+        min-height: 632px;
+        padding: 71px 16px 25px 16px;
+    }
+    .form-container .input-container .icon {
+        width: 12px;
+        height: 12px;
+    }
+    .check-container .label-form .link {
+        padding-left: 24px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1157px) {
+    .page-header .container {
+        align-items: center;
+    }
     .container {
         flex-direction: row;
         flex-wrap: wrap;
     }   
 
+    .logo-header {
+        margin-right: 120px;
+    }
+
         .address-header .link {
-            padding-top: 17px;
-            padding-bottom: 17px;
+            padding-top: 0;
+            padding-bottom: 0;
             font-size: 12px;
             line-height: 1.16667;
             letter-spacing: 0.04em;
@@ -1052,10 +1073,15 @@ a {
         }
     
         .page-footer .container {
+            align-items: flex-start;
+            justify-content: flex-start;
             flex-wrap: wrap;
             width: 584px;
         }
-    
+        
+        .page-footer .container .text {
+            max-width: 264px;
+        }
         .footerlogo-container {
             margin-right: 24px;
         }
@@ -1073,6 +1099,10 @@ a {
     .page-header .container {
         flex-direction: row;
     }
+    .logo-header {
+        margin-right: 76px;
+    }
+
     .category-header,
     .address-header {
         justify-content: flex-end;
